@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Soap" xmlns:typens="urn:ActionWebService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="urn:ActionWebService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:ActionWebService" xmlns="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="StructMPlanArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructMPlan[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutPlansReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutPlansReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructDRsvplayArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructDRsvplay[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="GetUsersReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="user_data" type="typens:StructGlUserArray"/>
+          <xsd:element name="err_data" type="typens:GetUsersReturnErrdata"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructDRsvplay">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="sexcode" type="xsd:int"/>
+          <xsd:element name="knname" type="xsd:string"/>
+          <xsd:element name="memno" type="xsd:string"/>
+          <xsd:element name="rsvkojno" type="xsd:int"/>
+          <xsd:element name="entdate" type="xsd:date"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="entpsnno" type="xsd:int"/>
+          <xsd:element name="visno" type="xsd:string"/>
+          <xsd:element name="kjname" type="xsd:string"/>
+          <xsd:element name="rsvmosno" type="xsd:int"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="lockerno" type="xsd:int"/>
+          <xsd:element name="ryokbn" type="xsd:int"/>
+          <xsd:element name="uppdate" type="xsd:date"/>
+          <xsd:element name="deletecd" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="playcsno" type="xsd:int"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="mobile_kbn" type="xsd:int"/>
+          <xsd:element name="upppsnno" type="xsd:int"/>
+          <xsd:element name="warikbn" type="xsd:int"/>
+          <xsd:element name="ukekbn" type="xsd:int"/>
+          <xsd:element name="playtime" type="xsd:int"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="wariamt" type="xsd:int"/>
+          <xsd:element name="kumi" type="xsd:int"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+          <xsd:element name="mail" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructTRsvcangrpArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructTRsvcangrp[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutUsersReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutUsersReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRsvdatasReturnRsvdata">
+        <xsd:all>
+          <xsd:element name="rsvgrp" type="typens:StructTRsvgrpArray"/>
+          <xsd:element name="err_data" type="typens:GetRsvdatasReturnErrdata"/>
+          <xsd:element name="rsvplay" type="typens:StructTRsvplayArray"/>
+          <xsd:element name="rsvoffr" type="typens:StructTRsvoffr"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutUsersresultReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutUsersresultReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructDRsvoffr">
+        <xsd:all>
+          <xsd:element name="hostmno" type="xsd:string"/>
+          <xsd:element name="offrzip1" type="xsd:int"/>
+          <xsd:element name="uppdate" type="xsd:date"/>
+          <xsd:element name="offrjnm" type="xsd:string"/>
+          <xsd:element name="memo2" type="xsd:string"/>
+          <xsd:element name="beshcd" type="xsd:int"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="intrfax" type="xsd:string"/>
+          <xsd:element name="alkumcnt" type="xsd:int"/>
+          <xsd:element name="compno" type="xsd:int"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="rsvmosno" type="xsd:int"/>
+          <xsd:element name="intrvno" type="xsd:string"/>
+          <xsd:element name="hosttel" type="xsd:string"/>
+          <xsd:element name="deletecd" type="xsd:int"/>
+          <xsd:element name="color2" type="xsd:int"/>
+          <xsd:element name="offrfax" type="xsd:string"/>
+          <xsd:element name="entpsnno" type="xsd:int"/>
+          <xsd:element name="one_kbn" type="xsd:int"/>
+          <xsd:element name="intrhdy" type="xsd:string"/>
+          <xsd:element name="offrknm" type="xsd:string"/>
+          <xsd:element name="memo1" type="xsd:string"/>
+          <xsd:element name="ejntno" type="xsd:int"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="intrmno" type="xsd:string"/>
+          <xsd:element name="groupkbn" type="xsd:int"/>
+          <xsd:element name="compname" type="xsd:string"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="hostjnm" type="xsd:string"/>
+          <xsd:element name="offradr2" type="xsd:string"/>
+          <xsd:element name="color1" type="xsd:int"/>
+          <xsd:element name="offrvno" type="xsd:string"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="offreml" type="xsd:string"/>
+          <xsd:element name="entdate" type="xsd:date"/>
+          <xsd:element name="intrtel" type="xsd:string"/>
+          <xsd:element name="plkojcnt" type="xsd:int"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="buejkbn" type="xsd:int"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="statekbn" type="xsd:int"/>
+          <xsd:element name="yeventcd" type="xsd:int"/>
+          <xsd:element name="hosteml" type="xsd:string"/>
+          <xsd:element name="send_mail3" type="xsd:string"/>
+          <xsd:element name="hostknm" type="xsd:string"/>
+          <xsd:element name="offradr1" type="xsd:string"/>
+          <xsd:element name="vrfpsnno" type="xsd:int"/>
+          <xsd:element name="offrmno" type="xsd:string"/>
+          <xsd:element name="offrhdy" type="xsd:string"/>
+          <xsd:element name="memo4" type="xsd:string"/>
+          <xsd:element name="dmsddate" type="xsd:date"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="intrjnm" type="xsd:string"/>
+          <xsd:element name="plkumcnt" type="xsd:int"/>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="send_mail2" type="xsd:string"/>
+          <xsd:element name="hostfax" type="xsd:string"/>
+          <xsd:element name="offrzip2" type="xsd:int"/>
+          <xsd:element name="upppsnno" type="xsd:int"/>
+          <xsd:element name="hostvno" type="xsd:string"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="offrtel" type="xsd:string"/>
+          <xsd:element name="memo3" type="xsd:string"/>
+          <xsd:element name="vrfdate" type="xsd:date"/>
+          <xsd:element name="intreml" type="xsd:string"/>
+          <xsd:element name="intrknm" type="xsd:string"/>
+          <xsd:element name="planid" type="xsd:int"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+          <xsd:element name="dmsdflag" type="xsd:int"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="alkojcnt" type="xsd:int"/>
+          <xsd:element name="hosthdy" type="xsd:string"/>
+          <xsd:element name="send_mail1" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvplanlinksReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutRsvplanlinksReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructMRsvplanlink">
+        <xsd:all>
+          <xsd:element name="created_at_userid" type="xsd:string"/>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="updated_at_userid" type="xsd:string"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="deleted_at" type="xsd:dateTime"/>
+          <xsd:element name="playcsno" type="xsd:int"/>
+          <xsd:element name="planid" type="xsd:int"/>
+          <xsd:element name="deleted_at_userid" type="xsd:string"/>
+          <xsd:element name="playtime" type="xsd:int"/>
+          <xsd:element name="latest_flg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutUsersReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutUsersReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="GetRsvdatasReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="rsvdata" type="typens:GetRsvdatasReturnRsvdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutUsersresultInparam">
+        <xsd:all>
+          <xsd:element name="users_result_data" type="typens:PutUsersresultInparamUser"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatasReturnErrdata">
+        <xsd:all>
+          <xsd:element name="rsvmosno" type="xsd:string"/>
+          <xsd:element name="planid" type="xsd:int"/>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutCompplansReturnErrdata">
+        <xsd:all>
+          <xsd:element name="compplanid" type="xsd:int"/>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutUsersReturnErrdata">
+        <xsd:all>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutUsersInparam">
+        <xsd:all>
+          <xsd:element name="users_data" type="typens:StructGlUserArray"/>
+          <xsd:element name="clear_flag" type="xsd:int"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructGlUserArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructGlUser[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructTRsvcanArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructTRsvcan[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutCompplansReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutCompplansReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvcanresultReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutRsvcanresultReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutCompplansReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutCompplansReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetPointsInparamSearch">
+        <xsd:all>
+          <xsd:element name="end_entdate" type="xsd:date"/>
+          <xsd:element name="str_entry_date" type="xsd:date"/>
+          <xsd:element name="end_entry_date" type="xsd:date"/>
+          <xsd:element name="ent_golf_id" type="xsd:string"/>
+          <xsd:element name="uptakeflg" type="xsd:int"/>
+          <xsd:element name="entrycode" type="xsd:int"/>
+          <xsd:element name="str_entdate" type="xsd:date"/>
+          <xsd:element name="post_flg" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvplanlinksInparam">
+        <xsd:all>
+          <xsd:element name="condition" type="typens:PutRsvplanlinksInparamCondition"/>
+          <xsd:element name="rsvplanlinks_data" type="typens:StructMRsvplanlinkArray"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatasInparam">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="condition" type="typens:PutRsvdatasInparamCondition"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="rsvdatas_data" type="typens:PutRsvdatasInparamRsvdata"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvtimesInparamCondition">
+        <xsd:all>
+          <xsd:element name="clear_flag" type="xsd:int"/>
+          <xsd:element name="str_date" type="xsd:date"/>
+          <xsd:element name="end_date" type="xsd:date"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatesReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutRsvdatesReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutPointsReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutPointsReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutPointsReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutPointsReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructGlPointArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructGlPoint[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="GetPointsReturnErrdata">
+        <xsd:all>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRsvdatasReturnRsvdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:GetRsvdatasReturnRsvdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructMCompplanArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructMCompplan[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvresultInparam">
+        <xsd:all>
+          <xsd:element name="rsvresult_data" type="typens:PutRsvresultInparamRsvdata"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatasInparamCondition">
+        <xsd:all>
+          <xsd:element name="clear_flag" type="xsd:int"/>
+          <xsd:element name="str_date" type="xsd:date"/>
+          <xsd:element name="end_date" type="xsd:date"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatesReturnErrdata">
+        <xsd:all>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRsvcandatasReturnErrdata">
+        <xsd:all>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructDRsvgrpArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructDRsvgrp[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructMCompplan">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="url" type="xsd:string"/>
+          <xsd:element name="prize1" type="xsd:string"/>
+          <xsd:element name="kumicnt3" type="xsd:int"/>
+          <xsd:element name="kojicnt2" type="xsd:int"/>
+          <xsd:element name="discount3" type="xsd:int"/>
+          <xsd:element name="hometext" type="xsd:string"/>
+          <xsd:element name="kumicnt2" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="memo1" type="xsd:string"/>
+          <xsd:element name="kojicnt1" type="xsd:int"/>
+          <xsd:element name="prize3" type="xsd:string"/>
+          <xsd:element name="discount2" type="xsd:int"/>
+          <xsd:element name="compplanid" type="xsd:int"/>
+          <xsd:element name="kumicnt1" type="xsd:int"/>
+          <xsd:element name="memo2" type="xsd:string"/>
+          <xsd:element name="prize2" type="xsd:string"/>
+          <xsd:element name="title" type="xsd:string"/>
+          <xsd:element name="memo3" type="xsd:string"/>
+          <xsd:element name="discount1" type="xsd:int"/>
+          <xsd:element name="kojicnt3" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructMRsvtimeArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructMRsvtime[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvtimesInparam">
+        <xsd:all>
+          <xsd:element name="condition" type="typens:PutRsvtimesInparamCondition"/>
+          <xsd:element name="rsvtimes_data" type="typens:StructMRsvtimeArray"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructTRsvplayArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructTRsvplay[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatasReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutRsvdatasReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructGlUser">
+        <xsd:all>
+          <xsd:element name="specialzip_main" type="xsd:string"/>
+          <xsd:element name="card_id" type="xsd:string"/>
+          <xsd:element name="kaihilckcd3" type="xsd:int"/>
+          <xsd:element name="hdcp" type="xsd:double"/>
+          <xsd:element name="cardenddate" type="xsd:date"/>
+          <xsd:element name="zip_sub" type="xsd:string"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="kaihilckcnt3" type="xsd:int"/>
+          <xsd:element name="specialadd2" type="xsd:string"/>
+          <xsd:element name="stopreason" type="xsd:int"/>
+          <xsd:element name="address3" type="xsd:string"/>
+          <xsd:element name="latest_flg" type="xsd:string"/>
+          <xsd:element name="roll_kbn" type="xsd:int"/>
+          <xsd:element name="kaihietccd2" type="xsd:int"/>
+          <xsd:element name="special_fax" type="xsd:string"/>
+          <xsd:element name="mvcode" type="xsd:int"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="kana" type="xsd:string"/>
+          <xsd:element name="deleted_at" type="xsd:dateTime"/>
+          <xsd:element name="memo5" type="xsd:string"/>
+          <xsd:element name="officezip_main" type="xsd:string"/>
+          <xsd:element name="specialtelex" type="xsd:string"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+          <xsd:element name="memcode3" type="xsd:int"/>
+          <xsd:element name="kaihietccnt2" type="xsd:int"/>
+          <xsd:element name="memo3" type="xsd:string"/>
+          <xsd:element name="kaihimemcd2" type="xsd:int"/>
+          <xsd:element name="officeadd2" type="xsd:string"/>
+          <xsd:element name="seikyupayflag" type="xsd:int"/>
+          <xsd:element name="addrcode2" type="xsd:int"/>
+          <xsd:element name="crypted_password" type="xsd:string"/>
+          <xsd:element name="office_fax" type="xsd:string"/>
+          <xsd:element name="kaihimemcnt2" type="xsd:int"/>
+          <xsd:element name="seikyubranch" type="xsd:int"/>
+          <xsd:element name="uptakeflg" type="xsd:int"/>
+          <xsd:element name="faxwherecode" type="xsd:int"/>
+          <xsd:element name="mail_requestflg1" type="xsd:int"/>
+          <xsd:element name="kaihilckcd1" type="xsd:int"/>
+          <xsd:element name="officeknname" type="xsd:string"/>
+          <xsd:element name="rsv_mail_flg" type="xsd:int"/>
+          <xsd:element name="seikyukname" type="xsd:string"/>
+          <xsd:element name="partcode" type="xsd:int"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+          <xsd:element name="kaihilckcnt1" type="xsd:int"/>
+          <xsd:element name="specialzip_sub" type="xsd:string"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="hdcp_get_date" type="xsd:date"/>
+          <xsd:element name="cardcnt" type="xsd:int"/>
+          <xsd:element name="address1" type="xsd:string"/>
+          <xsd:element name="specialadd3" type="xsd:string"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="kaihietcflag" type="xsd:int"/>
+          <xsd:element name="uptakedata" type="xsd:date"/>
+          <xsd:element name="stopstrdate" type="xsd:date"/>
+          <xsd:element name="telephone" type="xsd:string"/>
+          <xsd:element name="created_at_userid" type="xsd:string"/>
+          <xsd:element name="kaihietccd3" type="xsd:int"/>
+          <xsd:element name="specialname1" type="xsd:string"/>
+          <xsd:element name="memcode1" type="xsd:int"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="officezip_sub" type="xsd:string"/>
+          <xsd:element name="main_mail" type="xsd:string"/>
+          <xsd:element name="deleted_at_userid" type="xsd:string"/>
+          <xsd:element name="memo1" type="xsd:string"/>
+          <xsd:element name="kaihimemflag" type="xsd:int"/>
+          <xsd:element name="kaihietccnt3" type="xsd:int"/>
+          <xsd:element name="prefcd" type="xsd:int"/>
+          <xsd:element name="mem_flg" type="xsd:int"/>
+          <xsd:element name="memo4" type="xsd:string"/>
+          <xsd:element name="kaihimemcd3" type="xsd:int"/>
+          <xsd:element name="officeadd3" type="xsd:string"/>
+          <xsd:element name="salt" type="xsd:string"/>
+          <xsd:element name="seikyuautoflg" type="xsd:int"/>
+          <xsd:element name="birthday" type="xsd:date"/>
+          <xsd:element name="kaihimemcnt3" type="xsd:int"/>
+          <xsd:element name="office_name1" type="xsd:string"/>
+          <xsd:element name="seikyuyokin" type="xsd:int"/>
+          <xsd:element name="dmwherecode" type="xsd:int"/>
+          <xsd:element name="mail_requestflg2" type="xsd:int"/>
+          <xsd:element name="kaihilckcd2" type="xsd:int"/>
+          <xsd:element name="officetelex" type="xsd:string"/>
+          <xsd:element name="level" type="xsd:int"/>
+          <xsd:element name="cardstrdate" type="xsd:date"/>
+          <xsd:element name="zip_main" type="xsd:string"/>
+          <xsd:element name="seikyujname" type="xsd:string"/>
+          <xsd:element name="kaihilckcnt2" type="xsd:int"/>
+          <xsd:element name="specialadd1" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="address2" type="xsd:string"/>
+          <xsd:element name="card_no" type="xsd:string"/>
+          <xsd:element name="competition_flg" type="xsd:int"/>
+          <xsd:element name="user_regdate" type="xsd:date"/>
+          <xsd:element name="kaihietccd1" type="xsd:int"/>
+          <xsd:element name="special_tel" type="xsd:string"/>
+          <xsd:element name="golf_grp_id" type="xsd:int"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="updated_at_userid" type="xsd:string"/>
+          <xsd:element name="stopcount" type="xsd:int"/>
+          <xsd:element name="mobile_phone" type="xsd:string"/>
+          <xsd:element name="kanji" type="xsd:string"/>
+          <xsd:element name="memcode2" type="xsd:int"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="kaihietccnt1" type="xsd:int"/>
+          <xsd:element name="specialname2" type="xsd:string"/>
+          <xsd:element name="kaihimemcd1" type="xsd:int"/>
+          <xsd:element name="officeadd1" type="xsd:string"/>
+          <xsd:element name="mobile_mail" type="xsd:string"/>
+          <xsd:element name="memo2" type="xsd:string"/>
+          <xsd:element name="seikyureqflag" type="xsd:int"/>
+          <xsd:element name="addrcode1" type="xsd:int"/>
+          <xsd:element name="login" type="xsd:string"/>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="kaihimemcnt1" type="xsd:int"/>
+          <xsd:element name="office_tel" type="xsd:string"/>
+          <xsd:element name="seikyubank" type="xsd:int"/>
+          <xsd:element name="sexcode" type="xsd:int"/>
+          <xsd:element name="sub_mail" type="xsd:string"/>
+          <xsd:element name="office_name2" type="xsd:string"/>
+          <xsd:element name="kaihilckflag" type="xsd:int"/>
+          <xsd:element name="jobcode" type="xsd:int"/>
+          <xsd:element name="seikyukouza" type="xsd:string"/>
+          <xsd:element name="mail_requestflg3" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutPlansReturnErrdata">
+        <xsd:all>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="plan_id" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructTRsvcangrp">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="rsvkojnm3" type="xsd:string"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="deldate" type="xsd:date"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="rsvkojnm4" type="xsd:string"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="kumno" type="xsd:int"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="rsvkoj_mail1" type="xsd:string"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="playcsno" type="xsd:int"/>
+          <xsd:element name="cdykbn" type="xsd:int"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="mosno" type="xsd:int"/>
+          <xsd:element name="rsvkoj_mail2" type="xsd:string"/>
+          <xsd:element name="rsvkojnm1" type="xsd:string"/>
+          <xsd:element name="playtime" type="xsd:int"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="rsvkoj_mail3" type="xsd:string"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="rsvkojnm2" type="xsd:string"/>
+          <xsd:element name="rsvkoj_mail4" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructTRsvoffr">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="offradr1" type="xsd:string"/>
+          <xsd:element name="status" type="xsd:int"/>
+          <xsd:element name="alkojcnt" type="xsd:int"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="deldate" type="xsd:date"/>
+          <xsd:element name="send_mail3" type="xsd:string"/>
+          <xsd:element name="offrhdy" type="xsd:string"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="plkumcnt" type="xsd:int"/>
+          <xsd:element name="offradr2" type="xsd:string"/>
+          <xsd:element name="offreml" type="xsd:string"/>
+          <xsd:element name="rsvkbn" type="xsd:int"/>
+          <xsd:element name="rsvmosno" type="xsd:int"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="plkojcnt" type="xsd:int"/>
+          <xsd:element name="deletecd" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="planid" type="xsd:int"/>
+          <xsd:element name="yeventcd" type="xsd:int"/>
+          <xsd:element name="offrmeml" type="xsd:string"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="mobile_kbn" type="xsd:int"/>
+          <xsd:element name="offrknm" type="xsd:string"/>
+          <xsd:element name="mosno" type="xsd:int"/>
+          <xsd:element name="offrzip1" type="xsd:int"/>
+          <xsd:element name="groupkbn" type="xsd:int"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="send_mail1" type="xsd:string"/>
+          <xsd:element name="offrjnm" type="xsd:string"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="alkumcnt" type="xsd:int"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+          <xsd:element name="offrzip2" type="xsd:int"/>
+          <xsd:element name="offrtel" type="xsd:string"/>
+          <xsd:element name="send_mail2" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructDRsvoffrArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructDRsvoffr[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvcanresultInparam">
+        <xsd:all>
+          <xsd:element name="rsvcanresult_data" type="typens:PutRsvcanresultInparamRsvcandata"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructDRsvgrp">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="memo4" type="xsd:string"/>
+          <xsd:element name="deldate" type="xsd:date"/>
+          <xsd:element name="rsvkumno" type="xsd:int"/>
+          <xsd:element name="rsvmosno" type="xsd:int"/>
+          <xsd:element name="deletecd" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="cdykbn" type="xsd:int"/>
+          <xsd:element name="memo1" type="xsd:string"/>
+          <xsd:element name="memo2" type="xsd:string"/>
+          <xsd:element name="cartkbn" type="xsd:int"/>
+          <xsd:element name="memo3" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvplanlinksReturnErrdata">
+        <xsd:all>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="playcsno" type="xsd:int"/>
+          <xsd:element name="playtime" type="xsd:int"/>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="plan_id" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructMRsvplanlinkArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructMRsvplanlink[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvcanresultReturnErrdata">
+        <xsd:all>
+          <xsd:element name="status" type="xsd:int"/>
+          <xsd:element name="mosno" type="xsd:string"/>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRsvdatasReturnErrdata">
+        <xsd:all>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutUsersresultReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutUsersresultReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutPointsReturnErrdata">
+        <xsd:all>
+          <xsd:element name="entrydate" type="xsd:date"/>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetUsersReturnErrdata">
+        <xsd:all>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutPointsInparam">
+        <xsd:all>
+          <xsd:element name="clear_flag" type="xsd:int"/>
+          <xsd:element name="points_data" type="typens:StructGlPointArray"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvresultReturnErrdata">
+        <xsd:all>
+          <xsd:element name="status" type="xsd:int"/>
+          <xsd:element name="mosno" type="xsd:string"/>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvtimesReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutRsvtimesReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructMRsvtime">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="csi4nflg" type="xsd:int"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="csi1nflg" type="xsd:int"/>
+          <xsd:element name="playtime" type="xsd:int"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="csi2nflg" type="xsd:int"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="csi3nflg" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatesReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutRsvdatesReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetUsersInparamSearch">
+        <xsd:all>
+          <xsd:element name="end_entdate" type="xsd:date"/>
+          <xsd:element name="mobile_mail" type="xsd:string"/>
+          <xsd:element name="str_update" type="xsd:date"/>
+          <xsd:element name="intro_no" type="xsd:string"/>
+          <xsd:element name="end_update" type="xsd:date"/>
+          <xsd:element name="kanji" type="xsd:string"/>
+          <xsd:element name="uptakeflg" type="xsd:int"/>
+          <xsd:element name="kana" type="xsd:string"/>
+          <xsd:element name="latest_flg" type="xsd:string"/>
+          <xsd:element name="str_entdate" type="xsd:date"/>
+          <xsd:element name="main_mail" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvplanlinksReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutRsvplanlinksReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvcanresultReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutRsvcanresultReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructTRsvcan">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="status" type="xsd:int"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="send_mail3" type="xsd:string"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="mosno" type="xsd:int"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="send_mail1" type="xsd:string"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+          <xsd:element name="send_mail2" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutUsersresultReturnErrdata">
+        <xsd:all>
+          <xsd:element name="uptakeflg" type="xsd:int"/>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatasReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutRsvdatasReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvresultInparamRsvdata">
+        <xsd:all>
+          <xsd:element name="status" type="xsd:int"/>
+          <xsd:element name="rsvmosno" type="xsd:int"/>
+          <xsd:element name="mosno" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRsvcandatasReturnRsvcandata">
+        <xsd:all>
+          <xsd:element name="rsvcangrp" type="typens:StructTRsvcangrpArray"/>
+          <xsd:element name="err_data" type="typens:GetRsvcandatasReturnErrdata"/>
+          <xsd:element name="rsvcan" type="typens:StructTRsvcanArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatesInparamCondition">
+        <xsd:all>
+          <xsd:element name="clear_flag" type="xsd:int"/>
+          <xsd:element name="str_date" type="xsd:date"/>
+          <xsd:element name="end_date" type="xsd:date"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetPointsReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:GetPointsReturnErrdata"/>
+          <xsd:element name="point_data" type="typens:StructGlPointArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructDRsvstatArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructDRsvstat[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructDRsvstat">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="rsvkojno3" type="xsd:int"/>
+          <xsd:element name="entryflg" type="xsd:int"/>
+          <xsd:element name="rsvkumno" type="xsd:int"/>
+          <xsd:element name="reminderno" type="xsd:int"/>
+          <xsd:element name="rsvmosno" type="xsd:int"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="rsvkojno4" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="playcsno" type="xsd:int"/>
+          <xsd:element name="yeventcd" type="xsd:int"/>
+          <xsd:element name="playtime" type="xsd:int"/>
+          <xsd:element name="rsvkojno1" type="xsd:int"/>
+          <xsd:element name="rsvkojno2" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetUsersInparam">
+        <xsd:all>
+          <xsd:element name="user_search_item" type="typens:GetUsersInparamSearch"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructGlPoint">
+        <xsd:all>
+          <xsd:element name="created_at_userid" type="xsd:string"/>
+          <xsd:element name="entry_counts1" type="xsd:int"/>
+          <xsd:element name="extitem2" type="xsd:int"/>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="send_flg" type="xsd:int"/>
+          <xsd:element name="amount_points" type="xsd:int"/>
+          <xsd:element name="updated_at_userid" type="xsd:string"/>
+          <xsd:element name="extitem3" type="xsd:int"/>
+          <xsd:element name="entry_counts2" type="xsd:int"/>
+          <xsd:element name="get_points" type="xsd:int"/>
+          <xsd:element name="update_reason" type="xsd:string"/>
+          <xsd:element name="entry_counts3" type="xsd:int"/>
+          <xsd:element name="extitem4" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="deleted_at" type="xsd:dateTime"/>
+          <xsd:element name="grpcd" type="xsd:int"/>
+          <xsd:element name="used_points" type="xsd:int"/>
+          <xsd:element name="entrydate" type="xsd:date"/>
+          <xsd:element name="deleted_at_userid" type="xsd:string"/>
+          <xsd:element name="extitem5" type="xsd:int"/>
+          <xsd:element name="entry_counts4" type="xsd:int"/>
+          <xsd:element name="card_id" type="xsd:string"/>
+          <xsd:element name="request_points" type="xsd:int"/>
+          <xsd:element name="card_no" type="xsd:string"/>
+          <xsd:element name="entry_counts5" type="xsd:int"/>
+          <xsd:element name="entrycode" type="xsd:int"/>
+          <xsd:element name="post_time" type="xsd:date"/>
+          <xsd:element name="latest_flg" type="xsd:string"/>
+          <xsd:element name="extitem1" type="xsd:int"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+          <xsd:element name="post_flg" type="xsd:int"/>
+          <xsd:element name="entry_golf_id" type="xsd:string"/>
+          <xsd:element name="send_time" type="xsd:date"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutPlansInparam">
+        <xsd:all>
+          <xsd:element name="plans_data" type="typens:StructMPlanArray"/>
+          <xsd:element name="clear_flag" type="xsd:int"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructTRsvplay">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="status" type="xsd:int"/>
+          <xsd:element name="rsvkojno" type="xsd:int"/>
+          <xsd:element name="knname" type="xsd:string"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="deldate" type="xsd:date"/>
+          <xsd:element name="kaiin_no" type="xsd:string"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="kjname" type="xsd:string"/>
+          <xsd:element name="rsvkumno" type="xsd:int"/>
+          <xsd:element name="tel" type="xsd:string"/>
+          <xsd:element name="rsvmosno" type="xsd:int"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="deletecd" type="xsd:int"/>
+          <xsd:element name="ryokbn" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="playcsno" type="xsd:int"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="mobile_kbn" type="xsd:int"/>
+          <xsd:element name="warikbn" type="xsd:int"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="wariamt" type="xsd:int"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="mail" type="xsd:string"/>
+          <xsd:element name="one_kbn" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructTRsvgrp">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="memo4" type="xsd:string"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="rsvkojno3" type="xsd:int"/>
+          <xsd:element name="deldate" type="xsd:date"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="rsvkumno" type="xsd:int"/>
+          <xsd:element name="rsvkojno4" type="xsd:int"/>
+          <xsd:element name="rsvmosno" type="xsd:int"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="deletecd" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="cdykbn" type="xsd:int"/>
+          <xsd:element name="playcsno" type="xsd:int"/>
+          <xsd:element name="memo1" type="xsd:string"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="memo2" type="xsd:string"/>
+          <xsd:element name="playtime" type="xsd:int"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="rsvkojno1" type="xsd:int"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="memo3" type="xsd:string"/>
+          <xsd:element name="rsvkojno2" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructMRsvdate">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="color1" type="xsd:int"/>
+          <xsd:element name="memo4" type="xsd:string"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="maxcart3" type="xsd:int"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="color2" type="xsd:int"/>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="maxcart4" type="xsd:int"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="yobikbn" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="maxcart5" type="xsd:int"/>
+          <xsd:element name="memo1" type="xsd:string"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="maxcady" type="xsd:int"/>
+          <xsd:element name="memo2" type="xsd:string"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="maxcart1" type="xsd:int"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="memo3" type="xsd:string"/>
+          <xsd:element name="bumdtime" type="xsd:int"/>
+          <xsd:element name="maxcart2" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetPointsInparam">
+        <xsd:all>
+          <xsd:element name="point_search_item" type="typens:GetPointsInparamSearch"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvresultReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutRsvresultReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvtimesReturnErrdata">
+        <xsd:all>
+          <xsd:element name="playdate" type="xsd:date"/>
+          <xsd:element name="playtime" type="xsd:int"/>
+          <xsd:element name="err_cd" type="xsd:int"/>
+          <xsd:element name="err_msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructTRsvgrpArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructTRsvgrp[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutUsersresultInparamUser">
+        <xsd:all>
+          <xsd:element name="uptakeflg" type="xsd:int"/>
+          <xsd:element name="webuser_no" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvresultReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutRsvresultReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatasInparamRsvdata">
+        <xsd:all>
+          <xsd:element name="rsvgrp" type="typens:StructDRsvgrpArray"/>
+          <xsd:element name="rsvstat" type="typens:StructDRsvstatArray"/>
+          <xsd:element name="rsvplay" type="typens:StructDRsvplayArray"/>
+          <xsd:element name="rsvoffr" type="typens:StructDRsvoffrArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutCompplansInparam">
+        <xsd:all>
+          <xsd:element name="compplans_data" type="typens:StructMCompplanArray"/>
+          <xsd:element name="clear_flag" type="xsd:int"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRsvcandatasReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="rsvcandata" type="typens:GetRsvcandatasReturnRsvcandataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRsvcandatasReturnRsvcandataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:GetRsvcandatasReturnRsvcandata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvtimesReturn">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:int"/>
+          <xsd:element name="err_data" type="typens:PutRsvtimesReturnErrdataArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructMRsvdateArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:StructMRsvdate[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvdatesInparam">
+        <xsd:all>
+          <xsd:element name="rsvdates_data" type="typens:StructMRsvdateArray"/>
+          <xsd:element name="condition" type="typens:PutRsvdatesInparamCondition"/>
+          <xsd:element name="golf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvcanresultInparamRsvcandata">
+        <xsd:all>
+          <xsd:element name="status" type="xsd:int"/>
+          <xsd:element name="rsvmosno" type="xsd:int"/>
+          <xsd:element name="mosno" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PutPlansReturnErrdataArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:PutPlansReturnErrdata[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PutRsvplanlinksInparamCondition">
+        <xsd:all>
+          <xsd:element name="clear_flag" type="xsd:int"/>
+          <xsd:element name="str_date" type="xsd:date"/>
+          <xsd:element name="end_date" type="xsd:date"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StructMPlan">
+        <xsd:all>
+          <xsd:element name="updated_at" type="xsd:dateTime"/>
+          <xsd:element name="excondition4" type="xsd:int"/>
+          <xsd:element name="lunchcd" type="xsd:int"/>
+          <xsd:element name="url" type="xsd:string"/>
+          <xsd:element name="ratesatone" type="xsd:int"/>
+          <xsd:element name="minagem" type="xsd:int"/>
+          <xsd:element name="exfieldtxt1" type="xsd:string"/>
+          <xsd:element name="excondition10" type="xsd:int"/>
+          <xsd:element name="maxkoji" type="xsd:int"/>
+          <xsd:element name="privilege" type="xsd:string"/>
+          <xsd:element name="ratesatthree" type="xsd:int"/>
+          <xsd:element name="minhdcp" type="xsd:int"/>
+          <xsd:element name="exfieldtxt2" type="xsd:string"/>
+          <xsd:element name="maxagem" type="xsd:int"/>
+          <xsd:element name="ratesunone" type="xsd:int"/>
+          <xsd:element name="roundcd" type="xsd:int"/>
+          <xsd:element name="excondition5" type="xsd:int"/>
+          <xsd:element name="maxhdcp" type="xsd:int"/>
+          <xsd:element name="ratesunthree" type="xsd:int"/>
+          <xsd:element name="hometext" type="xsd:string"/>
+          <xsd:element name="rateweek" type="xsd:int"/>
+          <xsd:element name="minkumi" type="xsd:int"/>
+          <xsd:element name="exfield1" type="xsd:int"/>
+          <xsd:element name="excondition6" type="xsd:int"/>
+          <xsd:element name="twosumcd" type="xsd:int"/>
+          <xsd:element name="rateweektwo" type="xsd:int"/>
+          <xsd:element name="sexwcd" type="xsd:int"/>
+          <xsd:element name="created_at" type="xsd:dateTime"/>
+          <xsd:element name="exfieldtxt3" type="xsd:string"/>
+          <xsd:element name="exfield2" type="xsd:int"/>
+          <xsd:element name="maxkumi" type="xsd:int"/>
+          <xsd:element name="ratesat" type="xsd:int"/>
+          <xsd:element name="planid" type="xsd:int"/>
+          <xsd:element name="onersvcd" type="xsd:int"/>
+          <xsd:element name="excondition1" type="xsd:int"/>
+          <xsd:element name="exfieldtxt4" type="xsd:string"/>
+          <xsd:element name="minagew" type="xsd:int"/>
+          <xsd:element name="ratesattwo" type="xsd:int"/>
+          <xsd:element name="stopdate" type="xsd:date"/>
+          <xsd:element name="excondition7" type="xsd:int"/>
+          <xsd:element name="excondition2" type="xsd:int"/>
+          <xsd:element name="cdycd" type="xsd:int"/>
+          <xsd:element name="compplanid" type="xsd:int"/>
+          <xsd:element name="ratesun" type="xsd:int"/>
+          <xsd:element name="mvcd" type="xsd:int"/>
+          <xsd:element name="exfield3" type="xsd:int"/>
+          <xsd:element name="excondition8" type="xsd:int"/>
+          <xsd:element name="stoptime" type="xsd:int"/>
+          <xsd:element name="title" type="xsd:string"/>
+          <xsd:element name="ratesuntwo" type="xsd:int"/>
+          <xsd:element name="maxagew" type="xsd:int"/>
+          <xsd:element name="exfield4" type="xsd:int"/>
+          <xsd:element name="sexmcd" type="xsd:int"/>
+          <xsd:element name="rateweekone" type="xsd:int"/>
+          <xsd:element name="cartcd" type="xsd:int"/>
+          <xsd:element name="excondition3" type="xsd:int"/>
+          <xsd:element name="basedate" type="xsd:date"/>
+          <xsd:element name="rateweekthree" type="xsd:int"/>
+          <xsd:element name="minititle" type="xsd:string"/>
+          <xsd:element name="minkoji" type="xsd:int"/>
+          <xsd:element name="excondition9" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="PutRsvresult">
+    <part name="param0" type="typens:PutRsvresultInparam"/>
+  </message>
+  <message name="PutRsvresultResponse">
+    <part name="return" type="typens:PutRsvresultReturn"/>
+  </message>
+  <message name="PutPlans">
+    <part name="param0" type="typens:PutPlansInparam"/>
+  </message>
+  <message name="PutPlansResponse">
+    <part name="return" type="typens:PutPlansReturn"/>
+  </message>
+  <message name="PutPoints">
+    <part name="param0" type="typens:PutPointsInparam"/>
+  </message>
+  <message name="PutPointsResponse">
+    <part name="return" type="typens:PutPointsReturn"/>
+  </message>
+  <message name="GetRsvcandatas">
+    <part name="golf_id" type="xsd:string"/>
+  </message>
+  <message name="GetRsvcandatasResponse">
+    <part name="return" type="typens:GetRsvcandatasReturn"/>
+  </message>
+  <message name="GetPoints">
+    <part name="param0" type="typens:GetPointsInparam"/>
+  </message>
+  <message name="GetPointsResponse">
+    <part name="return" type="typens:GetPointsReturn"/>
+  </message>
+  <message name="PutRsvplanlinks">
+    <part name="param0" type="typens:PutRsvplanlinksInparam"/>
+  </message>
+  <message name="PutRsvplanlinksResponse">
+    <part name="return" type="typens:PutRsvplanlinksReturn"/>
+  </message>
+  <message name="PutRsvcanresult">
+    <part name="param0" type="typens:PutRsvcanresultInparam"/>
+  </message>
+  <message name="PutRsvcanresultResponse">
+    <part name="return" type="typens:PutRsvcanresultReturn"/>
+  </message>
+  <message name="PutCompplans">
+    <part name="param0" type="typens:PutCompplansInparam"/>
+  </message>
+  <message name="PutCompplansResponse">
+    <part name="return" type="typens:PutCompplansReturn"/>
+  </message>
+  <message name="GetUsers">
+    <part name="param0" type="typens:GetUsersInparam"/>
+  </message>
+  <message name="GetUsersResponse">
+    <part name="return" type="typens:GetUsersReturn"/>
+  </message>
+  <message name="PutRsvdatas">
+    <part name="param0" type="typens:PutRsvdatasInparam"/>
+  </message>
+  <message name="PutRsvdatasResponse">
+    <part name="return" type="typens:PutRsvdatasReturn"/>
+  </message>
+  <message name="PutUsersresult">
+    <part name="param0" type="typens:PutUsersresultInparam"/>
+  </message>
+  <message name="PutUsersresultResponse">
+    <part name="return" type="typens:PutUsersresultReturn"/>
+  </message>
+  <message name="PutRsvdates">
+    <part name="param0" type="typens:PutRsvdatesInparam"/>
+  </message>
+  <message name="PutRsvdatesResponse">
+    <part name="return" type="typens:PutRsvdatesReturn"/>
+  </message>
+  <message name="GetRsvdatas">
+    <part name="golf_id" type="xsd:string"/>
+  </message>
+  <message name="GetRsvdatasResponse">
+    <part name="return" type="typens:GetRsvdatasReturn"/>
+  </message>
+  <message name="PutRsvtimes">
+    <part name="param0" type="typens:PutRsvtimesInparam"/>
+  </message>
+  <message name="PutRsvtimesResponse">
+    <part name="return" type="typens:PutRsvtimesReturn"/>
+  </message>
+  <message name="PutUsers">
+    <part name="param0" type="typens:PutUsersInparam"/>
+  </message>
+  <message name="PutUsersResponse">
+    <part name="return" type="typens:PutUsersReturn"/>
+  </message>
+  <portType name="SoapSoapPort">
+    <operation name="PutRsvresult">
+      <input message="typens:PutRsvresult"/>
+      <output message="typens:PutRsvresultResponse"/>
+    </operation>
+    <operation name="PutPlans">
+      <input message="typens:PutPlans"/>
+      <output message="typens:PutPlansResponse"/>
+    </operation>
+    <operation name="PutPoints">
+      <input message="typens:PutPoints"/>
+      <output message="typens:PutPointsResponse"/>
+    </operation>
+    <operation name="GetRsvcandatas">
+      <input message="typens:GetRsvcandatas"/>
+      <output message="typens:GetRsvcandatasResponse"/>
+    </operation>
+    <operation name="GetPoints">
+      <input message="typens:GetPoints"/>
+      <output message="typens:GetPointsResponse"/>
+    </operation>
+    <operation name="PutRsvplanlinks">
+      <input message="typens:PutRsvplanlinks"/>
+      <output message="typens:PutRsvplanlinksResponse"/>
+    </operation>
+    <operation name="PutRsvcanresult">
+      <input message="typens:PutRsvcanresult"/>
+      <output message="typens:PutRsvcanresultResponse"/>
+    </operation>
+    <operation name="PutCompplans">
+      <input message="typens:PutCompplans"/>
+      <output message="typens:PutCompplansResponse"/>
+    </operation>
+    <operation name="GetUsers">
+      <input message="typens:GetUsers"/>
+      <output message="typens:GetUsersResponse"/>
+    </operation>
+    <operation name="PutRsvdatas">
+      <input message="typens:PutRsvdatas"/>
+      <output message="typens:PutRsvdatasResponse"/>
+    </operation>
+    <operation name="PutUsersresult">
+      <input message="typens:PutUsersresult"/>
+      <output message="typens:PutUsersresultResponse"/>
+    </operation>
+    <operation name="PutRsvdates">
+      <input message="typens:PutRsvdates"/>
+      <output message="typens:PutRsvdatesResponse"/>
+    </operation>
+    <operation name="GetRsvdatas">
+      <input message="typens:GetRsvdatas"/>
+      <output message="typens:GetRsvdatasResponse"/>
+    </operation>
+    <operation name="PutRsvtimes">
+      <input message="typens:PutRsvtimes"/>
+      <output message="typens:PutRsvtimesResponse"/>
+    </operation>
+    <operation name="PutUsers">
+      <input message="typens:PutUsers"/>
+      <output message="typens:PutUsersResponse"/>
+    </operation>
+  </portType>
+  <binding name="SoapSoapBinding" type="typens:SoapSoapPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+    <operation name="PutRsvresult">
+      <soap:operation soapAction="/soap/api/PutRsvresult"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutPlans">
+      <soap:operation soapAction="/soap/api/PutPlans"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutPoints">
+      <soap:operation soapAction="/soap/api/PutPoints"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetRsvcandatas">
+      <soap:operation soapAction="/soap/api/GetRsvcandatas"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetPoints">
+      <soap:operation soapAction="/soap/api/GetPoints"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutRsvplanlinks">
+      <soap:operation soapAction="/soap/api/PutRsvplanlinks"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutRsvcanresult">
+      <soap:operation soapAction="/soap/api/PutRsvcanresult"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutCompplans">
+      <soap:operation soapAction="/soap/api/PutCompplans"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetUsers">
+      <soap:operation soapAction="/soap/api/GetUsers"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutRsvdatas">
+      <soap:operation soapAction="/soap/api/PutRsvdatas"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutUsersresult">
+      <soap:operation soapAction="/soap/api/PutUsersresult"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutRsvdates">
+      <soap:operation soapAction="/soap/api/PutRsvdates"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetRsvdatas">
+      <soap:operation soapAction="/soap/api/GetRsvdatas"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutRsvtimes">
+      <soap:operation soapAction="/soap/api/PutRsvtimes"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="PutUsers">
+      <soap:operation soapAction="/soap/api/PutUsers"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="SoapService">
+    <port name="SoapSoapPort" binding="typens:SoapSoapBinding">
+      <soap:address location="http://www.562-489.jp/soap2/soap/api"/>
+    </port>
+  </service>
+</definitions>
